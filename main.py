@@ -64,9 +64,8 @@ class MyPlugin(Star):
             rand_emoji_list = random.sample(emoji_list, emojiNum)
             set_emoji = True  # 是否贴表情
             for i in range(emojiNum):
-                if not i % 2 == 0:
-                    set_emoji = False
-                await self.send_emoji(event, replyID, 128053, set_emoji)
+                await self.send_emoji(event, replyID, 128053, True)
+                await self.send_emoji(event, replyID, 128053, False)
                 # 防止请求过于密集
                 sleep(self.time_interval)  # type: ignore
     
