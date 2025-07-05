@@ -26,7 +26,7 @@ emoji_list = [
     '128560', '128563'
 ]
 
-@register("astrbot_qqemotionreply", "QiChen", "让bot给消息回应表情", "1.1.0")
+@register("youmo_shushu", "xiaomaznai", "hou weapon", "1.0.0")
 class MyPlugin(Star):
     def __init__(self, context: Context, config: AstrBotConfig):
         super().__init__(context)
@@ -39,7 +39,7 @@ class MyPlugin(Star):
         self.admin_list=self.context.get_config().admins_id
     
     #使用指令的方式贴表情
-    @filter.command("贴表情", alias={'fill', '贴'})
+    @filter.command("hou")
     async def replyMessage(self, event: AstrMessageEvent,emojiNum:int=-1):
         #如果用户未输入参数,读取配置文件默认值
         keyed_num=True
